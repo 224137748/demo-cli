@@ -11,6 +11,7 @@ import { red, green, bold, yellow, blue } from 'kolorist'
 import banner from './utils/banner'
 import renderTemplate from './utils/renderTemplate'
 import renderEslint from './utils/renderEslint'
+import renderSSO from './utils/renderSSO'
 import generateReadme from './utils/generateReadme'
 import { postOrderDirectoryTraverse, preOrderDirectoryTraverse, getCommand } from './utils'
 
@@ -336,6 +337,9 @@ async function init() {
 
   if (needsCypressCT) {
     render('config/cypress-ct')
+  }
+  if (needsSSO) {
+    renderSSO(root)
   }
 
   if (needsTypeScript) {

@@ -9,7 +9,7 @@ var config = {}
 try {
   config = Object.assign(config, environmentConfig)
 } catch (error) {
-  console.log('启动配置错误： ', e)
+  console.log('启动配置错误： ', error)
 }
 
 // 导出配置
