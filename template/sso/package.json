@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "serve": "run-p dev app",
+    "start": "cross-env TAEGERTIP=pro node ./bin/www",
+    "app": "cross-env TARGET=test node ./bin/www",
+    "pack": "node ./sso/archive.js",
+    "pack:cdn": "cross-env STATUS=cdn node ./sso/archive.js"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1",
+    "archiver": "^3.0.0",
+    "dayjs": "^1.10.8",
+    "cookie-parser": "^1.4.4",
+    "pinpoint-node-agent": "^0.8.3",
+    "js-md5": "^0.7.3"
+  }
+}
